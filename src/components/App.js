@@ -1,3 +1,4 @@
+import Dashboard from './Dashboard';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
@@ -10,10 +11,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <span>Hello {this.props.authedUser}</span>
+        {this.props.isLoading ? null :
+          <Dashboard />
+        }
       </div>
-    )
+    );
   }
 }
 
-export default connect((state) => ({authedUser: state.authedUser}))(App);
+const mapStateToProps = (state) => ({
+  isLoading: state.authedUser === null,
+  authedUser: state.authedUser,
+});
+
+export default connect(mapStateToProps)(App);
