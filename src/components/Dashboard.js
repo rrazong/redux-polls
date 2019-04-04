@@ -70,8 +70,14 @@ function mapStateToProps(state) {
     users,
   } = state;
   const getPoll = (pollId) => polls[pollId];
-  const answered = users[authedUser].answers.map(getPoll);
-  const unanswered = Object.keys(polls).filter((pollId) => answered.includes(pollId) === false).map(getPoll);
+  const sortMostRecentFirst = (a, b) => (b.timestamp - a.timestamp);
+  const answered = users[authedUser].answers
+    .map(getPoll)
+    .sort(sortMostRecentFirst);
+  const unanswered = Object.keys(polls)
+    .filter((pollId) => answered.includes(pollId) === false)
+    .map(getPoll)
+    .sort(sortMostRecentFirst);
 
   return {
     authedUser,
