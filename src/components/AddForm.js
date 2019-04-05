@@ -41,7 +41,6 @@ export class AddForm extends Component {
       },
     }
     this.props.dispatch(handleAddPoll(poll));
-    console.log('add poll');
   }
 
   isDisabled = () => {

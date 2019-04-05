@@ -4,6 +4,7 @@ import LoadingBar from 'react-redux-loading';
 import Dashboard from './Dashboard';
 import Leaderboard from './Leaderboard';
 import AddForm from './AddForm';
+import Poll from './Poll'; 
 
 import {handleInitializeData} from '../actions/shared';
 
@@ -16,7 +17,7 @@ class App extends Component {
       <div>
         <LoadingBar/>
         {this.props.isLoading ? null :
-          <AddForm/>
+          <Poll match={{params: {id:'6ni6ok3ym7mf1p33lnez'}}}/>
         }
       </div>
     );
