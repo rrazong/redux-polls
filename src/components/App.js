@@ -17,7 +17,7 @@ class App extends Component {
       <div>
         <LoadingBar/>
         {this.props.isLoading ? null :
-          <Poll match={{params: {id:'6ni6ok3ym7mf1p33lnez'}}}/>
+          <Poll match={{params: {id:'xj352vofupe1dqz9emx13r'}}}/>
         }
       </div>
     );
