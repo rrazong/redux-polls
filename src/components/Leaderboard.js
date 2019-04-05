@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 const Leaderboard = ({leaders}) => (
@@ -7,7 +7,7 @@ const Leaderboard = ({leaders}) => (
       leaders.map((user) => {
         return (
           <li key={user.id} style={{display: 'flex'}}>
-            <img src={user.avatarURL} style={{
+            <img src={user.avatarURL} alt={user.name} style={{
               height: 80,
               width: 80,
               borderRadius: 10,

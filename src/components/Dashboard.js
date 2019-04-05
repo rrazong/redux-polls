@@ -19,7 +19,6 @@ class Dashboard extends Component {
 
   render() {
     const {
-      authedUser,
       answered,
       unanswered,
     } = this.props;
@@ -79,7 +78,6 @@ function mapStateToProps(state) {
     .sort(sortMostRecentFirst);
 
   return {
-    authedUser,
     answered,
     unanswered,
   }

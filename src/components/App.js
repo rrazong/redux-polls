@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import LoadingBar from 'react-redux-loading';
 import Dashboard from './Dashboard';
 import Leaderboard from './Leaderboard';
+import AddForm from './AddForm';
 
 import {handleInitializeData} from '../actions/shared';
 
@@ -15,7 +16,7 @@ class App extends Component {
       <div>
         <LoadingBar/>
         {this.props.isLoading ? null :
-          <Leaderboard/>
+          <AddForm/>
         }
       </div>
     );
