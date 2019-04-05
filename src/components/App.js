@@ -1,7 +1,8 @@
-import Dashboard from './Dashboard';
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import LoadingBar from 'react-redux-loading';
+import Dashboard from './Dashboard';
+import Leaderboard from './Leaderboard';
 
 import {handleInitializeData} from '../actions/shared';
 
@@ -14,7 +15,7 @@ class App extends Component {
       <div>
         <LoadingBar/>
         {this.props.isLoading ? null :
-          <Dashboard/>
+          <Leaderboard/>
         }
       </div>
     );
