@@ -40,6 +40,7 @@ export class AddForm extends Component {
         text: optionD,
       },
     }
+    this.props.history.push('/');
     this.props.dispatch(handleAddPoll(poll));
   }
 
